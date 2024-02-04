@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "294062943565",
+    "project_id": "sticker-grasser-test",
+    "storage_bucket": "sticker-grasser-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294062943565:android:faa038080e9bb3a6141b04",
+        "android_client_info": {
+          "package_name": "com.example.nestjs_test_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6kZsOZcp8gzRusdZYlSCBFa8tkgBPIkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
