@@ -28,7 +28,6 @@ class JoinView extends GetView<JoinController> {
                       ListViewIdField(),
                       ListViewPwField(),
                       ListViewPwRepeatField(),
-                      ListViewNicknameField(),
                       ListViewAccountCreateButton(),
                     ],
                   ),
@@ -83,20 +82,20 @@ class JoinView extends GetView<JoinController> {
     );
   }
 
-  Widget ListViewNicknameField() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SizedBox(
-            width: 80,
-            child: Text(
-              "닉네임",
-              textAlign: TextAlign.center,
-            )),
-        Expanded(child: TextField(controller: controller.textFieldControllers['nickname']))
-      ],
-    );
-  }
+  // Widget ListViewNicknameField() {
+  //   return Row(
+  //     mainAxisAlignment: MainAxisAlignment.center,
+  //     children: [
+  //       SizedBox(
+  //           width: 80,
+  //           child: Text(
+  //             "닉네임",
+  //             textAlign: TextAlign.center,
+  //           )),
+  //       Expanded(child: TextField(controller: controller.textFieldControllers['nickname']))
+  //     ],
+  //   );
+  // }
 
   Widget ListViewAccountCreateButton() {
     return Padding(

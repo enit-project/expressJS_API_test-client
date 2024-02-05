@@ -1,3 +1,4 @@
+import 'package:nestjs_test_flutter/app/screen/Login/view/login_view.dart';
 import 'package:nestjs_test_flutter/package/debug_console.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,7 +19,7 @@ class MypageController extends GetxController {
 
   Future<void> logout() async {
     await AuthService.to.logOut();
-    Get.rootDelegate.offAndToNamed(Routes.LOGIN);
+    Get.off(const LoginView());
   }
 
   Future<void> withDraw() async {

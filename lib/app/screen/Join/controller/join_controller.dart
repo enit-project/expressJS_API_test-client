@@ -11,7 +11,6 @@ class JoinController extends GetxController {
     'email_id': TextEditingController(),
     'pw': TextEditingController(),
     'pw_repeat': TextEditingController(),
-    'nickname': TextEditingController(),
   };
 
   Future<void> userJoin() async {

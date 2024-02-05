@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:nestjs_test_flutter/package/debug_console.dart';
+import 'package:nestjs_test_flutter/service/server_service.dart';
 
 Future<void> main() async {
   ///파이어베이스 연동
@@ -20,6 +21,7 @@ Future<void> main() async {
         () async {
           // 초기화 하면서 서비스를 가져온다.
           Get.put(AuthService());
+          Get.put(ServerAPIService());
         },
       ),
       getPages: AppPages.routes,
