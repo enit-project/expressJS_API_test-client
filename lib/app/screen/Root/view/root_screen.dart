@@ -17,38 +17,6 @@ class RootView extends GetView<RootController> {
       builder: (context, delegate, currentRoute) {
         return Scaffold(
           body: GetRouterOutlet(initialRoute: Routes.LOGIN),
-          appBar: AppBar(
-            actions: [
-              // unsecure direct api call
-              IconButton(
-                  onPressed: () async {
-                    final testResponse = await ServerAPIService.to.get("/unsecure/helloWorld");
-                    log("response : ${testResponse.toString()}");
-                    Get.defaultDialog(
-                      title: "getTest",
-                      content: Text(testResponse.toString()),
-                    );
-                  },
-                  icon: const Icon(Icons.directions_walk)),
-              // secured api call
-              IconButton(
-                  onPressed: () async {
-                    final testResponse = await ServerAPIService.to.get("/secure/helloWorld");
-                    log("response : ${testResponse.toString()}");
-                    Get.defaultDialog(
-                      title: "getTest",
-                      content: Text(testResponse.toString()),
-                    );
-                  },
-                  icon: const Icon(Icons.security_rounded)),
-              // auth token injection
-              IconButton(
-                  onPressed: () {
-                    ServerAPIService.to.firebaseTokenAdd();
-                  },
-                  icon: const Icon(Icons.login)),
-            ],
-          ),
         );
       },
     );

@@ -25,7 +25,9 @@ class JoinView extends GetView<JoinController> {
                   width: 300,
                   child: ListView(
                     children: [
-                      ListViewIdField(),
+                      ListViewEmailField(),
+                      ListViewNameField(),
+                      ListViewRoleField(),
                       ListViewPwField(),
                       ListViewPwRepeatField(),
                       ListViewAccountCreateButton(),
@@ -36,20 +38,51 @@ class JoinView extends GetView<JoinController> {
             )));
   }
 
-  Widget ListViewIdField() {
+  Widget ListViewEmailField() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
             width: 80,
             child: Text(
-              "ID (email)",
+              "이메일 (아이디)",
               textAlign: TextAlign.center,
             )),
         Expanded(child: TextField(controller: controller.textFieldControllers['email_id']))
       ],
     );
   }
+
+  Widget ListViewNameField() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SizedBox(
+            width: 80,
+            child: Text(
+              "이름",
+              textAlign: TextAlign.center,
+            )),
+        Expanded(child: TextField(controller: controller.textFieldControllers['name']))
+      ],
+    );
+  }
+
+  Widget ListViewRoleField() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SizedBox(
+            width: 80,
+            child: Text(
+              "역할 (STUDENT / PARENT / TEACHER)",
+              textAlign: TextAlign.center,
+            )),
+        Expanded(child: TextField(controller: controller.textFieldControllers['role']))
+      ],
+    );
+  }
+
 
   Widget ListViewPwField() {
     return Row(
