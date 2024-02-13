@@ -16,11 +16,9 @@ class MypageView extends GetView<MypageController> {
               backgroundColor: Colors.white,
               elevation: 0.0,
               centerTitle: true,
-              title: Obx(
-                () => Text(
-                  'testuser 님의 계정 정보',
-                  style: TextStyle(color: Colors.black),
-                ),
+              title: Text(
+                'testuser 님의 계정 정보',
+                style: TextStyle(color: Colors.black),
               ),
             ),
             body: Center(
@@ -59,8 +57,6 @@ class MypageView extends GetView<MypageController> {
       ],
     );
   }
-
-
 
   Widget ListViewLogOutButton() {
     return Padding(

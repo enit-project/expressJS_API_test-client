@@ -59,20 +59,21 @@ class JoinController extends GetxController {
 
     if (status == JoinStatus.success) {
       await ServerAPIService.to.firebaseTokenAdd();
-      final serverStatus = await ServerAPIService.to.post(
+      final Map serverStatus = await ServerAPIService.to.post(
           '/api/users/join',
           ({
             "name": textFieldMap['name'] ?? "",
             "email": textFieldMap['email_id'] ?? "",
             "role": textFieldMap['role'] ?? "",
           }));
-      log(serverStatus.length.toString());
+      log(serverStatus.toString());
+      log(serverStatus["statusCode"].toString());
       // if server response body is not empty, this is the err code. so, delete the token and the account from the firebase Auth.
-      if (serverStatus.length != 0) {
+      if (serverStatus["statusCode"] == 200) {
+        title = "환영합니다!";
+      } else {
         await AuthService.to.withDrawUser();
         snackString = "이름, 이메일, 지위 (name, email, role) 중 하나가 잘못되어, 서버에서 회원등록을 거부하였습니다.";
-      } else {
-        title = "환영합니다!";
       }
     }
 

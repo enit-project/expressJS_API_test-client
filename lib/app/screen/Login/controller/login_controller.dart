@@ -11,6 +11,13 @@ class LoginController extends GetxController {
   final idTextControl = TextEditingController();
   final pwTextControl = TextEditingController();
 
+  // @override
+  // void onInit() {
+  //   if (AuthService.to.getCurrentUser() != null) {
+  //     Get.to(const MypageView(), binding: MypageBinding());
+  //   }
+  //   super.onInit();
+  // }
 
   Future<void> fireAuthLogin() async {
     if (idTextControl.text.isEmpty == true || pwTextControl.text.isEmpty == true) {
