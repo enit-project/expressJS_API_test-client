@@ -17,7 +17,6 @@ class AppPages {
       participatesInRootNavigator: true,
       preventDuplicates: true,
       children: [GetPage(preventDuplicates: true, name: _Paths.LOGIN, page: () => const LoginView(), binding: LoginBinding())],
-
     ),
   ];
 }

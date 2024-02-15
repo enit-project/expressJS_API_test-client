@@ -43,8 +43,7 @@ class MypageController extends GetxController {
       if (fireBaseStatus == WithDrawStatus.success) {
         title = "회원탈퇴에 성공하였습니다.";
         snackString = "다음에 천국에서 뵈요!";
-        Get.off(Routes.LOGIN);
-        return;
+        Get.toNamed( Routes.LOGIN);
       } else if (fireBaseStatus == WithDrawStatus.noLoginRecent) {
         snackString = "로그인 기록이 너무 오래 되었습니다. 재로그인을 해야 할 수 있습니다. (데이터는 삭제되었습니다.)";
       } else {

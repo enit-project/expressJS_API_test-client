@@ -10,8 +10,8 @@ import 'package:nestjs_test_flutter/package/debug_console.dart';
 class ServerAPIService {
   // getx singleton pattern
   static ServerAPIService get to => Get.find();
-  // String host = "http://129.154.214.178:3000"; // remote server
-  String host = "http://172.19.3.136:3000"; // library local
+  String host = "http://129.154.214.178:3000"; // remote server
+  // String host = "http://172.19.3.136:3000"; // library local
 
   Map<String, String> headers = {'authorization': 'Bearer unauthorized'};
 
