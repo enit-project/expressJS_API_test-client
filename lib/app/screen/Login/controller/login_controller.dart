@@ -8,8 +8,8 @@ import 'package:nestjs_test_flutter/app/routes/app_pages.dart';
 class LoginController extends GetxController {
   static LoginController get to => Get.find();
 
-  final idTextControl = TextEditingController();
-  final pwTextControl = TextEditingController();
+  final idTextControl = TextEditingController(text:"password@gmail.com");
+  final pwTextControl = TextEditingController(text:"password");
 
   // @override
   // void onInit() {

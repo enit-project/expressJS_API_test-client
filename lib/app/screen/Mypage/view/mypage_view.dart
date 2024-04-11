@@ -46,12 +46,11 @@ class MypageView extends GetView<MypageController> {
         const SizedBox(
             width: 80,
             child: Text(
-              "ID",
+              "Bearer",
               textAlign: TextAlign.center,
             )),
         Expanded(
             child: TextField(
-          enabled: false,
           controller: controller.idTextControl,
         ))
       ],

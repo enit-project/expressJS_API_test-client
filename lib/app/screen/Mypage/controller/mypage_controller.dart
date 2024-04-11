@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:nestjs_test_flutter/app/screen/Login/view/login_view.dart';
 import 'package:nestjs_test_flutter/package/debug_console.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MypageController extends GetxController {
 
   @override
   void onInit() async {
-    idTextControl.text = AuthService.to.getCurrentUser()?.uid ?? "";
+    idTextControl.text = await FirebaseAuth.instance.currentUser?.getIdToken() ?? "";
     super.onInit();
   }
 
